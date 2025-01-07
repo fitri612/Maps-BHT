@@ -28,6 +28,7 @@ const App = () => {
   return (
     <div className="p-4 max-w-full mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 items-center p-4 rounded-lg gap-4">
+        {/* 1 */}
         <div className="flex items-center bg-white p-4 rounded-lg shadow-md">
           <div className="text-gray-500 text-sm font-semibold">TRACKING</div>
           <div className="ml-4 flex-1">
@@ -46,13 +47,14 @@ const App = () => {
           </div>
         </div>
 
+        {/* 2 */}
         <div className="flex justify-center ml-5">
-          <div className="grid grid-flow-col auto-cols-max gap-2">
+          <div className="flex flex-wrap gap-2">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab.toLowerCase())}
-                className={`px-4 py-2 text-sm rounded-md transition-colors outline-none
+                className={`px-2 py-2 text-sm rounded-md transition-colors outline-none
             ${activeTab === tab.toLowerCase()
                     ? "bg-blue-500 text-white outline outline-2 outline-blue-500"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
@@ -64,7 +66,8 @@ const App = () => {
           </div>
         </div>
 
-        <div className="flex justify-end">
+        {/* 3 */}
+        <div className="flex justify-end col-end-0">
           <button className="px-4 py-2 bg-blue-500 text-white text-sm rounded-md shadow hover:bg-blue-600 transition">
             Vehicle Tracking List
           </button>
